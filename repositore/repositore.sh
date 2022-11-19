@@ -4,9 +4,9 @@ cd RepositORE
 
 code .
 
-firefox https://github.com/
+x-www-browser https://github.com/
 
-firefox https://angular.io/
+x-www-browser https://angular.io/
 
-firefox https://drive.google.com/drive/my-drive
+x-www-browser https://drive.google.com/drive/my-drive
 
