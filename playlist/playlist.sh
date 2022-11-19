@@ -1,1 +1,1 @@
-firefox https://youtube.com/playlist?list=PLqft-iBm53YIwBI7pcEUy3PQPByVOwW-p
+x-www-browser https://youtube.com/playlist?list=PLqft-iBm53YIwBI7pcEUy3PQPByVOwW-p
