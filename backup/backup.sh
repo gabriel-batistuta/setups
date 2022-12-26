@@ -3,6 +3,8 @@ cd
 # updating the packages
 sudo apt updade && sudo apt upgrade -y
 
+# INSTALLING THE PROGRAMS AND TOOLS ->
+
 # VLC player (video media player)
 sudo apt install vlc -y
 
@@ -24,6 +26,9 @@ sudo apt install snapd -y
 # discord (social network for gamers and more)
 sudo snap install discord -y
 
+# telegram desktop (social network for phones)
+sudo apt install telegram-desktop -y
+
 # zsh (command line interpreter)
 sudo apt install zsh -y
 
@@ -36,9 +41,6 @@ sudo apt install screenfetch -y
 # inxi (too show description of your system and pc)
 sudo apt install inxi -y
 
-# path for list your hardware. run: $hardware
-hardware=lshw
-
 # VS Code (code editor) for Debian packages
 sudo apt-get install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -49,6 +51,8 @@ rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code # or code-insiders
+
+# CONFIGS OF WORKSPACE ->
 
 # GIT (controller of code version)
 sudo apt install git -y
@@ -88,3 +92,12 @@ git clone https://github.com/gabriel-batistuta/script-anime.git
 git clone https://github.com/gitlordi/RepositORE.git
 
 ./RepositORE/setup.sh
+
+# SHORTCUTS ->
+
+# path to the work folder. run: $p 
+p='cd Documentos/programming'
+
+# path to list your hardware. run: $hardware
+hardware='lshw'
+
