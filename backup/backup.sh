@@ -1,6 +1,24 @@
 # return for home
 cd 
 
+echo 'you can see the complete documentation in -> https://github.com/gabriel-batistuta/setups/tree/master/backup'
+
+echo 'STARTING NOW!'
+
+# set the user using the command that catch the name of the user of the system
+# ref: https://pt.stackoverflow.com/questions/364889/como-passar-resultado-de-comando-para-uma-vari%C3%A1vel-em-bash#:~:text=Basta%20usar%20a%20sintaxe%20de,ser%20feita%20de%20dois%20jeitos.&text=Neste%20caso%20o%20resultado%20%C3%A9,haver%20diferen%C3%A7as%20entre%20as%20abordagens.
+
+# setting the username of the user
+echo 'please type your username: '
+read user
+
+# setting the email of the user
+echo 'please type your email: '
+read email
+
+# show username and email
+echo 'user: '$user, 'email:'$email
+
 # updating the packages
 sudo apt updade && sudo apt upgrade -y
 
@@ -9,16 +27,16 @@ sudo apt updade && sudo apt upgrade -y
 # GIT (controller of code version)
 sudo apt install git -y
 
-git config --global user.name "gabriel"
+git config --global user.name $user
 
-git config --global user.email batistutag190@gmail.com
+git config --global user.email $email
 
 # GitHub CLI (tool for development using GitHub)
 sudo apt install gh -y
 
 gh auth login
 
-# creating a local folder for work
+# creating a local folder for work in path: '/home/$user/Documentos/programming'
 cd Documentos
 
 mkdir programming
@@ -51,6 +69,11 @@ cd
 # VLC player (video media player)
 sudo apt install vlc -y
 
+# need instalation ->
+# need install the JAVA_HOME. ref: https://stackoverflow.com/questions/24641536/how-to-set-java-home-in-linux-for-all-users
+
+# plantuml (tool that transform a text in png, ASCI code). ref: https://plantuml.com/starting
+
 # Zeal docs (for documentation in programming languages)
 sudo apt install zeal -y
 
@@ -78,7 +101,7 @@ sudo apt install telegram-desktop -y
 # ZSH (command line interpreter).
 sudo apt install zsh -y
 
-# OH MY ZSH (conjunto de temas for ZSH)
+# OH MY ZSH (package of themes for ZSH)
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" && git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 
 # plugin de ZSH of error checker
@@ -108,6 +131,7 @@ sudo apt install code # or code-insiders
 git config --global core.editor code
 
 # SHORTCUTS ->
+# need using in the folder of the Linux init
 
 # path to the work folder. run: $p 
 p='cd Documentos/programming'
