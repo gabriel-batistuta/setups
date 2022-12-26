@@ -30,6 +30,15 @@ sudo apt install zsh -y
 # fzf (searcher of archives in command line)
 sudo apt install fzf -y
 
+# screenfetch (show description of your system and pc)
+sudo apt install screenfetch -y
+
+# inxi (too show description of your system and pc)
+sudo apt install inxi -y
+
+# path for list your hardware. run: $hardware
+hardware=lshw
+
 # VS Code (code editor) for Debian packages
 sudo apt-get install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
