@@ -20,7 +20,7 @@ read email
 echo 'user: '$user, 'email:'$email
 
 # updating the packages
-sudo apt updade && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 
 # CONFIGS OF WORKSPACE ->
 
