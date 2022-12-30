@@ -66,6 +66,10 @@ cd
 
 # INSTALLING THE PROGRAMS AND TOOLS ->
 
+# Tachi-desk (one project of Tachiyomi desktop)
+sudo add-apt-repository ppa:suwayomi/tachidesk-server
+sudo apt install tachidesk-server
+
 # VLC player (video media player)
 sudo apt install vlc -y
 
