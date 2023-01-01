@@ -147,11 +147,16 @@ sudo apt install code # or code-insiders
 git config --global core.editor code
 
 # SHORTCUTS ->
-# need using in the folder of the Linux init
+
+# local to file .bashrc who run the commands every you turn on the computer: /etc/bash.bashrc
+
+function commands_to_record(){     echo p='cd Documentos/programming';     echo hardware='sudo lshw'; }
+
+# an arrow (>) replaces the entire file, two arrows (>>) add whatever you want to the file without erasing its previous content
+commands_to_record >> .bashrc
 
 # path to the work folder. run: $p 
-p='cd Documentos/programming'
+# p='cd Documentos/programming'
 
 # path to list your hardware. run: $hardware
-hardware='lshw'
-
+# hardware='sudo lshw'
