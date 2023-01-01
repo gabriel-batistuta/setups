@@ -46,20 +46,32 @@ cd programming
 # downloading the repositories most used by me
 git clone https://github.com/gabriel-batistuta/setups.git
 
+chmod 777 setups/backup/backup.sh
+
+chmod 777 setups/backup/essential/essential.sh
+
+chmod 777 setups/playlist/playlist.sh
+
+chmod 777 setups/repositore/repositore.sh
+
 # downloading the dependencies for this repository
 git clone https://github.com/gabriel-batistuta/nxt-programs.git
+
+# permission for execute like a program
+chmod 777 nxt-programs/setup.sh
 
 ./nxt-programs/setup.sh
 
 # downloading the dependencies for this repository
 git clone https://github.com/gabriel-batistuta/script-anime.git
 
+# permission for execute like a program
+chmod 777 script-anime/setup.sh
+
 ./script-anime/setup.sh
 
 # downloading the dependencies for this repository
 git clone https://github.com/gitlordi/RepositORE.git
-
-./RepositORE/setup.sh
 
 # return for home
 cd
