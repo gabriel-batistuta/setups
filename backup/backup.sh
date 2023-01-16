@@ -8,6 +8,10 @@ echo 'STARTING NOW!'
 # set the user using the command that catch the name of the user of the system
 # ref: https://pt.stackoverflow.com/questions/364889/como-passar-resultado-de-comando-para-uma-vari%C3%A1vel-em-bash#:~:text=Basta%20usar%20a%20sintaxe%20de,ser%20feita%20de%20dois%20jeitos.&text=Neste%20caso%20o%20resultado%20%C3%A9,haver%20diferen%C3%A7as%20entre%20as%20abordagens.
 
+# configuration for the superuser
+sudo passwd root
+sudo passwd -u root
+
 # setting the username of the user
 echo 'please type your username: '
 read user
