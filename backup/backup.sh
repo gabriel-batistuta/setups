@@ -36,6 +36,9 @@ sudo apt install gh -y
 
 gh auth login
 
+# install the Authy Desktop in:'https://snapcraft.io/authy' for generate token for login (GitHub, Twitch)
+sudo snap install authy
+
 # creating a local folder for work in path: '/home/$user/Documentos/programming'
 cd Documentos
 
