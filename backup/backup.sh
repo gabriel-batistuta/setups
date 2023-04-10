@@ -157,10 +157,21 @@ git config --global core.editor code
 
 # local to file .bashrc who run the commands every you turn on the computer: /etc/bash.bashrc
 
-function commands_to_record(){     echo p='cd Documentos/programming';     echo hardware='sudo lshw'; }
+function commands_to_record(){     echo p='cd Documentos/programming';     echo hardware='sudo lshw'; echo uern='feeduern'; }
+
+
+feeduern() {
+	cd /home/gabriel/Documentos/programming/Feed_UERN_Render
+	python3 main.py
+	cd
+}
+
+function functions_to_record(){
+    echo feeduern
+}
 
 # an arrow (>) replaces the entire file, two arrows (>>) add whatever you want to the file without erasing its previous content
-commands_to_record >> .bashrc
+functions_to_record, commands_to_record >> .bashrc
 
 # path to the work folder. run: $p 
 # p='cd Documentos/programming'
