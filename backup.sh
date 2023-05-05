@@ -53,33 +53,6 @@ cd programming
 # downloading the repositories most used by me
 git clone https://github.com/gabriel-batistuta/setups.git
 
-chmod 777 setups/backup/backup.sh
-
-chmod 777 setups/backup/essential/essential.sh
-
-chmod 777 setups/playlist/playlist.sh
-
-chmod 777 setups/repositore/repositore.sh
-
-# downloading the dependencies for this repository
-git clone https://github.com/gabriel-batistuta/nxt-programs.git
-
-# permission for execute like a program
-chmod 777 nxt-programs/setup.sh
-
-./nxt-programs/setup.sh
-
-# downloading the dependencies for this repository
-git clone https://github.com/gabriel-batistuta/script-anime.git
-
-# permission for execute like a program
-chmod 777 script-anime/setup.sh
-
-./script-anime/setup.sh
-
-# downloading the dependencies for this repository
-git clone https://github.com/gitlordi/RepositORE.git
-
 # return for home
 cd
 
@@ -117,6 +90,7 @@ sudo snap install discord -y
 
 # telegram desktop (social network for phones)
 sudo apt install telegram-desktop -y
+# snap install telegram-desktop
 
 # Guide of install ZSH: 
 # https://www.vivaolinux.com.br/artigo/ZSH-Personalizando-seu-Terminal 
@@ -138,6 +112,16 @@ sudo apt install screenfetch -y
 
 # inxi (too show description of your system and pc). run: inxi
 sudo apt install inxi -y
+
+# wkhtmltopdf 'https://wkhtmltopdf.org'
+wget 'https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb'
+sudo dpkg -i wkhtmltox_0.12.6.1-2.jammy_amd64.deb
+
+# pdf2htmlEX 'https://github.com/pdf2htmlEX/pdf2htmlEX'
+wget 'https://github.com/pdf2htmlEX/pdf2htmlEX/releases/download/v0.18.8.rc1/pdf2htmlEX-0.18.8.rc1-master-20200630-Ubuntu-bionic-x86_64.deb'
+sudo dpkg -i pdf2htmlEX-0.18.8.rc1-master-20200630-Ubuntu-bionic-x86_64.deb
+
+
 
 # VS Code (code editor) for Debian packages
 sudo apt-get install wget gpg
