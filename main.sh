@@ -1,5 +1,5 @@
 #!/bin/zsh
-# sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 
 give_permission_and_run() {
     path=$1
