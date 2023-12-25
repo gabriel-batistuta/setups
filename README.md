@@ -1,3 +1,7 @@
-# *What is this?*
+# Setups
 
-well, it's a **repository of settings** that **optimize** my personal and work life and make it more **productive** with some **scripts of automations**.
+## Running
+```bash
+chmod +x main.sh
+sudo ./main.sh
+```
