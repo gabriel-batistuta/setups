@@ -45,7 +45,8 @@ files_to_run=(KEYS.sh
     apps/steam/steam.sh
     apps/telegram/telegram.sh
     apps/vlc/vlc.sh
-    apps/lutris/lutris.sh)
+    apps/lutris/lutris.sh
+    apps/vidcutter/vidcutter.sh)
 
 for file in "${files_to_run[@]}"; do
     give_permission_and_run $file
