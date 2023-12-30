@@ -10,8 +10,7 @@ give_permission_and_run() {
     fi
 }
 
-files_to_run=(KEYS.sh
-    requirements/git/git.sh
+files_to_run_PC=(requirements/git/git.sh
     requirements/github/github/github.sh
     requirements/github/github-cli/github-cli.sh
     development/python/python.sh
@@ -22,6 +21,7 @@ files_to_run=(KEYS.sh
     requirements/store/snap/snap.sh
     requirements/store/flatpak/flatpak.sh
     libraries/curl/curl.sh
+    libraries/wget/wget.sh
     libraries/inxi/inxi.sh
     libraries/jq/jq.sh
     libraries/neofetch/neofetch.sh
@@ -48,6 +48,59 @@ files_to_run=(KEYS.sh
     apps/lutris/lutris.sh
     apps/vidcutter/vidcutter.sh)
 
-for file in "${files_to_run[@]}"; do
-    give_permission_and_run $file
-done
+files_to_run_PHONE=(
+    requirements/git/git.sh
+    requirements/github/github/github.sh
+    requirements/github/github-cli/github-cli.sh
+    development/python/python.sh
+    zsh/zsh/zsh.sh
+    zsh/oh-my-zsh/oh-my-zsh.sh
+    zsh/oh-my-zsh/oh-my-zsh.py
+    libraries/curl/curl.sh
+    libraries/wget/wget.sh
+    libraries/inxi/inxi.sh
+    libraries/wkhtmltopdf/wkhtmltopdf.sh
+    development/node/node.sh
+    command/command.sh
+)
+
+write_installed_tools() {
+    # getting the filename of tool
+    tool_path=$1
+    tool=$(echo "$tool_path" | awk -F/ '{print $NF}' | cut -d. -f1)
+    
+    # creating a log file to write the installed tools
+    log_file="tools_log.txt"
+    if [ -e "~/$log_file" ]; then
+        :
+    else
+        cd
+        touch $log_file
+        echo "create: LOG_FILE ~/$log_file"
+    fi
+    echo "$tool" >> $log_file
+}
+
+main() {
+    PLATFORM=$(jq '.platform' KEYS.json) 
+    PC='x86_64'
+    PHONE='Android'
+
+    if [[ "$PLATFORM" == "$PC" ]]; then
+        echo "[Platform]: PC"
+        for file in "${files_to_run_PC[@]}"; do
+            give_permission_and_run $file
+            write_installed_tools $file
+        done
+    elif [[ "$PLATFORM" == "$PHONE" ]]; then
+        echo "[Platform]: PHONE"
+        for file in "${files_to_run_PHONE[@]}"; do
+            give_permission_and_run $file
+            write_installed_tools $file
+        done
+    else
+        echo -e "[UNKNOWN PLATFORM]\n[Aborting...]"
+    fi
+}
+
+main
