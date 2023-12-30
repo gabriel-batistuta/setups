@@ -9,3 +9,5 @@ echo 'alias uernnews="cd ~/Documents/programming/Feed_UERN_Render && python3 mai
 
 # update path to add lvim to path
 echo "export PATH="$HOME/.local/bin/:$PATH"" >> ~/.zshrc
+
+echo 'alias python="python3"' >> ~/.zshrc
