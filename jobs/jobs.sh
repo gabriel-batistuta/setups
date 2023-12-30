@@ -1,3 +1,5 @@
+# https://www.vivaolinux.com.br/topico/Comandos/Como-executar-programa-em-python-ao-iniciar-linux-mint
+
 cd
 
 echo "
