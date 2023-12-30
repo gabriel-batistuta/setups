@@ -1,4 +1,5 @@
 {
     "email":"YourEmail",
-    "username":"YourUsername"
+    "username":"YourUsername",
+    "platform":"YourPlatform"
 }
