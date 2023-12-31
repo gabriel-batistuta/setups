@@ -6,3 +6,6 @@ sudo apt install python3-pip
 
 # update pip
 python3 -m ensurepip --upgrade
+
+# virtual enviroment
+sudo apt install python3.10-venv
