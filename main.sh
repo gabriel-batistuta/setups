@@ -20,6 +20,7 @@ files_to_run_PC=(requirements/git/git.sh
     requirements/folder/folder.sh
     requirements/store/snap/snap.sh
     requirements/store/flatpak/flatpak.sh
+    requirements/tmux/tmux.sh
     libraries/curl/curl.sh
     libraries/wget/wget.sh
     libraries/inxi/inxi.sh
@@ -52,6 +53,7 @@ files_to_run_PHONE=(
     requirements/git/git.sh
     requirements/github/github/github.sh
     requirements/github/github-cli/github-cli.sh
+    requirements/tmux/tmux.sh
     development/python/python.sh
     zsh/zsh/zsh.sh
     zsh/oh-my-zsh/oh-my-zsh.sh
