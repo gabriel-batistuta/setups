@@ -14,3 +14,8 @@ echo 'alias hardware="sudo lshw"' >> ~/.zshrc
 echo 'alias uernnews="cd ~/Documents/programming/Feed_UERN_Render && python3 main.py && cd"' >> ~/.zshrc
 
 echo 'alias python="python3"' >> ~/.zshrc
+
+echo 'alias show_path() {
+        file=$1
+        echo "$(pwd)/$file"
+}' >> ~/.zshrc
