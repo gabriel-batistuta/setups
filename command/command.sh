@@ -1,39 +1,51 @@
-PLATFORM=$(jq '.platform' KEYS.json) 
+PLATFORM=$(jq '.platform' secret.json) 
 if [[ "$PLATFORM" == "$PC" ]]; then
     # update path to add lvim to path
     echo "export PATH="$HOME/.local/bin/:$PATH"" >> ~/.zshrc
 fi
 
 # shortcut for development folder
-echo 'alias p="cd ~/Documents/programming"' >> ~/.zshrc
+echo 'alias p="cd ~/Documents/programming"\n' >> ~/.zshrc
 
 # shorcut for view hardware info
-echo 'alias hardware="sudo lshw"' >> ~/.zshrc
+echo 'alias hardware="sudo lshw"\n' >> ~/.zshrc
 
 # shortcut for use a script
-echo 'alias uernnews="cd ~/Documents/programming/Feed_UERN_Render && python3 main.py && cd"' >> ~/.zshrc
+echo 'alias uernnews="cd ~/Documents/programming/Feed_UERN_Render && python3 main.py && cd"\n' >> ~/.zshrc
 
-echo 'alias python="python3"' >> ~/.zshrc
+# equivalent python call to windows
+echo 'alias python="python3"\n' >> ~/.zshrc
 
-echo 'alias show_path() {
+# show absolute path of a file
+echo 'show_path() {
         file=$1
         echo "$(pwd)/$file"
-}' >> ~/.zshrc
+}\n' >> ~/.zshrc
 
-echo 'alias remove_space() {
+# show filename of file removing blanks spaces
+echo 'remove_space() {
         file_name=$1
         echo "$file_name" | sed 's/ /\\ /g'
-}' >> ~/.zshrc
+}\n' >> ~/.zshrc
 
-echo 'alias find_file() {
+# find file by name
+echo 'find_file() {
    file_name=$1
    directory=$(pwd)
    find $directory -type f | fzf --preview 'cat {}' --query '$file_name'
-}' >> ~/.zshrc
+}\n' >> ~/.zshrc
 
-echo 'alias find_string() {
+# find all files with string in directory
+echo 'find_string() {
   string=$1 
   directory=$(pwd)
   grep -rl '$string' $directory | fzf --preview 'cat {}'
-}
-'
+}\n' >> ~/.zshrc
+
+# replace all string of files in current directory (except git)
+echo 'replace_string() {
+  directory=$(pwd)
+  old_string=$1
+  new_string=$2
+  find "$directory" -type f ! -path "*/.git/*" -exec sed -i "s/$old_string/$new_string/g" {} \;
+}\n' >> ~/.zshrc
