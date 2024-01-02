@@ -19,3 +19,8 @@ echo 'alias show_path() {
         file=$1
         echo "$(pwd)/$file"
 }' >> ~/.zshrc
+
+echo 'alias remove_space() {
+        file_name=$1
+        echo "$file_name" | sed 's/ /\\ /g'
+}' >> ~/.zshrc
