@@ -6,7 +6,7 @@ from pathlib import Path
 zsh_path = str(Path.home()) + '/.zshrc'
 
 directory_root = up_dir(up_dir(up_dir(__file__)))   
-with open(f'{directory_root}/KEYS.json') as secret_file:
+with open(f'{directory_root}/secret.json') as secret_file:
     json_object = json.load(secret_file)
     platform = json_object.get('platform')
 

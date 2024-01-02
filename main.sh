@@ -10,7 +10,8 @@ give_permission_and_run() {
     fi
 }
 
-files_to_run_PC=(requirements/git/git.sh
+files_to_run_PC=(KEYS.sh
+    requirements/git/git.sh
     requirements/github/github/github.sh
     requirements/github/github-cli/github-cli.sh
     development/python/python.sh
@@ -49,7 +50,7 @@ files_to_run_PC=(requirements/git/git.sh
     apps/lutris/lutris.sh
     apps/vidcutter/vidcutter.sh)
 
-files_to_run_PHONE=(
+files_to_run_PHONE=(KEYS.sh
     requirements/git/git.sh
     requirements/github/github/github.sh
     requirements/github/github-cli/github-cli.sh
@@ -84,7 +85,7 @@ write_installed_tools() {
 }
 
 main() {
-    PLATFORM=$(jq '.platform' KEYS.json) 
+    PLATFORM=$(jq '.platform' secret.json) 
     PC='x86_64'
     PHONE='Android'
 

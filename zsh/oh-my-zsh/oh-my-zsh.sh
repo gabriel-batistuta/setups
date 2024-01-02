@@ -1,5 +1,5 @@
 # plugins guide install: https://www.alura.com.br/artigos/oh-my-zsh-melhorando-produtividade-terminal 
-PLATFORM=$(jq '.platform' KEYS.json) 
+PLATFORM=$(jq '.platform' secret.json) 
 
 if [[ "$PLATFORM" == "$PC" ]]; then
     sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
