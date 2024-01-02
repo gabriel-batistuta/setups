@@ -24,3 +24,16 @@ echo 'alias remove_space() {
         file_name=$1
         echo "$file_name" | sed 's/ /\\ /g'
 }' >> ~/.zshrc
+
+echo 'alias find_file() {
+   file_name=$1
+   directory=$(pwd)
+   find $directory -type f | fzf --preview 'cat {}' --query '$file_name'
+}' >> ~/.zshrc
+
+echo 'alias find_string() {
+  string=$1 
+  directory=$(pwd)
+  grep -rl '$string' $directory | fzf --preview 'cat {}'
+}
+'
