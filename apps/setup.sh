@@ -6,7 +6,7 @@ install_app() {
     desktop_filename=$4
     icon_foldername=$5
 
-    sudo mv $executable_path /usr/bin/
+    sudo install $executable_path /usr/bin/
     exec=/usr/bin/$(basename "$executable_path")
     sudo mkdir /usr/share/icons/$icon_foldername
     sudo mv $icon_path /usr/share/icons/$icon_foldername
