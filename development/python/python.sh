@@ -59,4 +59,6 @@ update_python() {
 
     curl -O https://bootstrap.pypa.io/get-pip.py
     sudo /opt/python/${PYTHON_VERSION}/bin/python${PYTHON_MAJOR} get-pip.py
+
+    echo "PATH=/opt/python/${PYTHON_VERSION}/bin/:$PATH" >> ~/.zshrc
 }
