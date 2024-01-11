@@ -32,6 +32,7 @@ files_to_run_PC=(KEYS.sh
     libraries/wine/wine.sh
     libraries/wkhtmltopdf/wkhtmltopdf.sh
     jobs/jobs.sh
+    development/go/go.sh
     development/neovim/neovim.sh
     development/node/node.sh
     development/php/lamp-xampp.sh
@@ -48,7 +49,8 @@ files_to_run_PC=(KEYS.sh
     apps/telegram/telegram.sh
     apps/vlc/vlc.sh
     apps/lutris/lutris.sh
-    apps/vidcutter/vidcutter.sh)
+    apps/vidcutter/vidcutter.sh
+    tools/gobuster/gobuster.sh)
 
 files_to_run_PHONE=(KEYS.sh
     requirements/git/git.sh
@@ -65,6 +67,8 @@ files_to_run_PHONE=(KEYS.sh
     libraries/wkhtmltopdf/wkhtmltopdf.sh
     development/node/node.sh
     command/command.sh
+    development/go/go.sh
+    tools/gobuster/gobuster.sh
 )
 
 write_installed_tools() {
