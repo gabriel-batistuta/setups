@@ -40,6 +40,8 @@ files_to_run_PC=(KEYS.sh
     development/rust/rust.sh
     development/lunarvim/lunarvim.sh
     development/vscode/vscode.sh
+    development/postman/postman.sh
+    development/insomnia/insomnia.sh
     development/zeal/zeal.sh
     command/command.sh
     apps/authy/authy.sh
