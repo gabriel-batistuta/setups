@@ -44,6 +44,10 @@ files_to_run_PC=(KEYS.sh
     development/insomnia/insomnia.sh
     development/zeal/zeal.sh
     command/command.sh
+    package/apt/apt.sh
+    package/pacman/pacman.sh
+    package/rpm/rpm.sh
+    package/brew/brew.sh
     apps/authy/authy.sh
     apps/discord/discord.sh
     apps/qbitorrent/qbitorrent.sh
