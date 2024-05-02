@@ -1,9 +1,3 @@
-PLATFORM=$(jq '.platform' secret.json) 
-if [[ "$PLATFORM" == "$PC" ]]; then
-    # update path to add lvim to path
-    echo "export PATH="$HOME/.local/bin/:$PATH"" >> ~/.zshrc
-fi
-
 # shortcut for development folder
 echo 'alias p="cd ~/Documents/programming"\n' >> ~/.zshrc
 
@@ -11,10 +5,12 @@ echo 'alias p="cd ~/Documents/programming"\n' >> ~/.zshrc
 echo 'alias hardware="sudo lshw"\n' >> ~/.zshrc
 
 # shortcut for use a script
-echo 'alias uernnews="cd ~/Documents/programming/Feed_UERN_Render && python3 main.py && cd"\n' >> ~/.zshrc
+echo 'alias f="cd ~/Documents/programming/Feed_UERN_Render && python3 main.py && cd"\n' >> ~/.zshrc
 
 # equivalent python call to windows
 echo 'alias python="python3"\n' >> ~/.zshrc
+
+echo 'alias cls="clear"' >> ~/.zshrc
 
 # show absolute path of a file
 echo 'show_path() {

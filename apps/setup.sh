@@ -1,26 +1,25 @@
-install_app() {
-    app_name=$1
-    executable_path=$2
-    type="Application"
-    icon_path=$3
-    desktop_filename=$4
-    icon_foldername=$5
+# install the Authy Desktop in:'https://snapcraft.io/authy' for generate token for login (GitHub, Twitch)
+sudo snap install authy
 
-    sudo install $executable_path /usr/bin/
-    exec=/usr/bin/$(basename "$executable_path")
-    sudo mkdir /usr/share/icons/$icon_foldername
-    sudo mv $icon_path /usr/share/icons/$icon_foldername
-    icon=/usr/share/icons/$icon_foldername/$(basename "$icon_path")
-    sudo touch ~/.local/share/applications/$desktop_filename.desktop
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub "https://flathub.org/repo/flathub.flatpakrepo"
 
-    sudo echo "[Desktop Entry]
-    Name=$app_name
-    Exec=$exec
-    Type=Application
-    Icon=$icon" >> ~/.local/share/applications/$desktop_filename.desktop
-}
+flatpak install flathub com.obsproject.Studio
 
-refresh_menu() {
-    sudo gtk-update-icon-cache -f -t ~/.local/share/icons/
-    sudo update-desktop-database
-}
+flatpak install flathub com.discordapp.Discord
+
+flatpak install flathub net.lutris.Lutris
+
+# qbitorrent (downloader and seeder of archives in web)
+sudo apt install qbittorrent -y
+
+mkdir ~/Documents/temporary && cd ~/Documents/temporary 
+wget https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
+
+sudo dpkg -i steam.deb
+sudo apt-get install -f
+
+# telegram desktop (social network for phones)
+sudo apt install telegram-desktop -y
+
+sudo snap install vidcutter
