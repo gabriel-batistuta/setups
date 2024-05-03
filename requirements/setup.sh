@@ -2,6 +2,7 @@
 sudo apt-get install git
 git config --global user.email batistutag190@gmail.com
 git config --global user.name gabriel
+git config --global init.defaultBranch main
 
 # GitHub CLI (tool for development using GitHub)
 sudo apt install gh -y
