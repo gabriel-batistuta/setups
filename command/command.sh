@@ -10,7 +10,11 @@ echo 'alias f="cd ~/Documents/programming/Feed_UERN_Render && python3 main.py &&
 # equivalent python call to windows
 echo 'alias python="python3"\n' >> ~/.zshrc
 
+# equivalent clear call to windows
 echo 'alias cls="clear"' >> ~/.zshrc
+
+# call python venv
+echo 'alias python_venv="python3 -m virtualenv -p python3"' >> ~/.zshrc
 
 # show absolute path of a file
 echo 'show_path() {
