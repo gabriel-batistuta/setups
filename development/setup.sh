@@ -31,3 +31,18 @@ sudo snap install code --classic
 
 # Zeal docs (for documentation in programming languages)
 sudo apt install zeal -y
+
+# install postgresql
+sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get -y install postgresql
+# show if is running and the version
+sudo systemctl status postgresql.service
+psql --version
+# give password for user postgres
+sudo -u postgres psql << EOF
+alter user postgres password '0000'
+EOF
+# enter in postgres
+# psql -h localhost -U postgres
