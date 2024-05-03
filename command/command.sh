@@ -16,6 +16,8 @@ echo 'alias cls="clear"' >> ~/.zshrc
 # call python venv
 echo 'alias python_venv="python3 -m virtualenv -p python3"' >> ~/.zshrc
 
+echo 'alias postgres="psql -h localhost -U postgres"'
+
 # show absolute path of a file
 echo 'show_path() {
         file=$1
