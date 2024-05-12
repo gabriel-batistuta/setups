@@ -12,7 +12,12 @@ sudo apt install golang-go
 # https://www.reddit.com/r/lunarvim/comments/18o3fbg/comment/kef4en0/
 bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/rolling/utils/installer/install-neovim-from-release)
 
-sudo snap install node --classic
+# install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.nvm/nvm.sh
+nvm install 20
+node -v
+npm -v
 
 # php
 cd ~/Documents/temporary
