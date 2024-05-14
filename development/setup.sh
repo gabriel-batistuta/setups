@@ -12,6 +12,17 @@ sudo apt install golang-go
 # https://www.reddit.com/r/lunarvim/comments/18o3fbg/comment/kef4en0/
 bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/rolling/utils/installer/install-neovim-from-release)
 
+# python3
+sudo apt-get install python3
+# pip
+sudo apt install python3-pip
+# update pip
+python3 -m ensurepip --upgrade
+# virtual enviroment
+sudo apt install python3.10-venv
+# python error adviser
+sudo snap install pyright --classic
+
 # install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.nvm/nvm.sh
@@ -52,3 +63,4 @@ alter user postgres password '0000'
 EOF
 # enter in postgres
 # psql -h localhost -U postgres
+
