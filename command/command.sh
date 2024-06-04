@@ -51,3 +51,9 @@ echo 'replace_string() {
   new_string=$2
   find "$directory" -type f ! -path "*/.git/*" -exec sed -i "s/$old_string/$new_string/g" {} \;
 }\n' >> ~/.zshrc
+
+# rust tools for refined version of cat and ls files
+cargo install bat exa
+
+echo 'alias cat="bat"' >> ~/.zshrc
+echo 'alias ls="exa"' >> ~/.zshrc
