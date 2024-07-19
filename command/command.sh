@@ -1,11 +1,11 @@
 # shortcut for development folder
-echo 'alias p="cd ~/Documents/programming"\n' >> ~/.zshrc
+echo 'alias p="cd ~/Documentos/programming"\n' >> ~/.zshrc
 
 # shorcut for view hardware info
 echo 'alias hardware="sudo lshw"\n' >> ~/.zshrc
 
 # shortcut for use a script
-echo 'alias f="cd ~/Documents/programming/Feed_UERN_Render && python3 main.py && cd"\n' >> ~/.zshrc
+echo 'alias f="cd ~/Documentos/programming/Feed_UERN_Render && python3 main.py && cd"\n' >> ~/.zshrc
 
 # equivalent python call to windows
 echo 'alias python="python3"\n' >> ~/.zshrc
