@@ -65,3 +65,18 @@ EOF
 # enter in postgres
 # psql -h localhost -U postgres
 
+# flutter
+wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.22.3-stable.tar.xz
+sudo tar -xf ~/Downloads/flutter_linux_3.22.3-stable.tar.xz -C /usr/bin/
+echo 'export PATH="/usr/bin/flutter/bin:$PATH"' >> ~/.zshenv
+echo 'export PATH="/usr/bin/flutter/bin:$PATH"' >> ~/.bash_profile
+sudo apt install clang
+sudo apt install cmake
+sudo apt install ninja-build
+sudo apt install libgtk-3-dev
+# Open Android Studio
+# Tools Menu, SDK Manager
+# In the window that comes up there are inner panels, choose SDK Tools panel
+# Tick Android SDK Command-line Tools
+# Choose Apply button near the bottom of the window
+flutter doctor --android-licenses
