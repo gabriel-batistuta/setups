@@ -27,3 +27,7 @@ sudo apt install wine -y
 sudo apt install wkhtmltopdf
 
 sudo apt install gobuster
+
+# https://github.com/josueBarretogit/manga-tui
+sudo apt-get install -y libssl-dev
+cargo install manga-tui --locked
