@@ -58,5 +58,7 @@ cargo install bat exa
 echo 'alias cat="bat"' >> ~/.zshrc
 echo 'alias ls="exa"' >> ~/.zshrc
 
-echo 'alias vm_oracle="ssh -i ~/.ssh/id_rsa2 ubuntu@129.148.56.24 -p 22"' >> ~/.zshrc
-echo 'alias jutsu="ssh -D 9999 -C -q -N -i ~/.ssh/id_rsa2 ubuntu@129.148.56.24 -p 80"' >> ~/.zshrc
+chmod 600 ~/.ssh/id_rsa.pub
+chmod 600 ~/.ssh/id_rsa
+echo 'alias vm_oracle="ssh -i ~/.ssh/id_rsa ubuntu@129.148.56.24 -p 22"' >> ~/.zshrc
+echo 'alias jutsu="ssh -D 9999 -C -q -N -i ~/.ssh/id_rsa ubuntu@129.148.56.24 -p 80"' >> ~/.zshrc
