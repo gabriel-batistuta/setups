@@ -52,14 +52,19 @@ echo 'replace_string() {
   find "$directory" -type f ! -path "*/.git/*" -exec sed -i "s/$old_string/$new_string/g" {} \;
 }\n' >> ~/.zshrc
 
-py() { 
-  echo 'Criando ambiente de desenvolvimento Python'
+echo 'py() { 
+  echo "Criando ambiente de desenvolvimento Python"
   touch main.py
   touch requirements.txt
   touch README.md
   touch .gitignore
   mkdir modules
-}
+  touch modules/__init__.py
+  echo "import modules as md\n\nif __name__ == '__main__':\n\tpass" > main.py
+  echo "__pycache__/\ntest.py" > .gitignore
+  this_dir=$(basename $(pwd))
+  echo "# $this_dir\n\n" > README.md
+}\n' >> ~/.zshrc 
 
 # rust tools for refined version of cat and ls files
 cargo install bat exa
