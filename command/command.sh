@@ -61,7 +61,7 @@ echo 'py() {
   mkdir modules
   touch modules/__init__.py
   echo "import modules as md\n\nif __name__ == '__main__':\n\tpass" > main.py
-  echo "__pycache__/\ntest.py" > .gitignore
+  echo "__pycache__/\ntest.py\nvenv/\n.vscode/\n.github/" > .gitignore
   this_dir=$(basename $(pwd))
   echo "# $this_dir\n\n" > README.md
 }\n' >> ~/.zshrc 
