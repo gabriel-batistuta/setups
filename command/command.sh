@@ -52,6 +52,15 @@ echo 'replace_string() {
   find "$directory" -type f ! -path "*/.git/*" -exec sed -i "s/$old_string/$new_string/g" {} \;
 }\n' >> ~/.zshrc
 
+py() { 
+  echo 'Criando ambiente de desenvolvimento Python'
+  touch main.py
+  touch requirements.txt
+  touch README.md
+  touch .gitignore
+  mkdir modules
+}
+
 # rust tools for refined version of cat and ls files
 cargo install bat exa
 
