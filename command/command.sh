@@ -66,6 +66,12 @@ echo 'py() {
   echo "# $this_dir\n\n" > README.md
 }\n' >> ~/.zshrc 
 
+echo 'output() {
+  echo "log do sistema"
+  cat /var/log/syslog | grep CRON
+  #cat /var/log/mail.log
+}\n' >> ~/.zshrc
+
 # rust tools for refined version of cat and ls files
 cargo install bat exa
 
