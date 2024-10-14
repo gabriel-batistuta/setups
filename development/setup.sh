@@ -65,6 +65,9 @@ EOF
 # enter in postgres
 # psql -h localhost -U postgres
 
+# ODBC
+sudo apt install odbc-postgresql
+
 # flutter
 wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.22.3-stable.tar.xz
 sudo tar -xf ~/Downloads/flutter_linux_3.22.3-stable.tar.xz -C /usr/bin/
