@@ -39,6 +39,8 @@ sudo ./xampp-linux-x64-8.2.0-0-installer.run
 
 # ruby
 sudo apt-get install ruby-full
+# rails
+gem install rails
 
 # sqlite
 sudo apt install sqlite3
