@@ -40,6 +40,11 @@ sudo ./xampp-linux-x64-8.2.0-0-installer.run
 # ruby
 sudo apt-get install ruby-full
 
+# sqlite
+sudo apt install sqlite3
+sqlite3 --version
+sudo apt install sqlitebrowser
+
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
