@@ -1,6 +1,12 @@
 # shortcut for development folder
 echo 'alias p="cd ~/Documentos/programming"\n' >> ~/.zshrc
 
+echo 'alias s="source venv/bin/activate"\n' >> ~/.zshrc
+
+echo 'alias r="pip install -r requirements.txt"\n' >> ~/.zshrc
+
+echo 'alias v="python3 -m venv venv"\n' >> ~/.zshrc
+
 # shorcut for view hardware info
 echo 'alias hardware="sudo lshw"\n' >> ~/.zshrc
 
