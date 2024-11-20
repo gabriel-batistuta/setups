@@ -11,7 +11,7 @@ sudo update-alternatives --set x-www-browser /usr/bin/firefox-developer
 update-alternatives --display x-www-browser
 
 # desinstalar firefox padrão
-sudo apt remove --purge firefox
+sudo snap remove firefox
 
 
 # git
