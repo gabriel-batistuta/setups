@@ -3,13 +3,15 @@ wget "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=lin
 sudo tar -jxvf  firefox-developer.tar.bz2 -C /opt/
 sudo mv /opt/firefox*/ /opt/firefox-developer
 sudo ln -sf /opt/firefox-developer/firefox /usr/bin/firefox-developer
-echo -e '[Desktop Entry]\n Version=yy.y.y\n Encoding=UTF-8\n Name=Mozilla Firefox\n Comment=Navegador Web\n Exec=/opt/firefox-developer/firefox\n Icon=/opt/firefox-developer/browser/chrome/icons/default/default128.png\n Type=Application\n Categories=Network' | sudo tee /usr/share/applications/firefox-developer.desktop
+echo -e '[Desktop Entry]\nVersion=yy.y.y\nEncoding=UTF-8\nName=Firefox Developer Edition\nGenericName=Web Browser\nComment=Navegador Web de Desenvolvimento\nExec=/opt/firefox-developer/firefox %u\nIcon=/opt/firefox-developer/browser/chrome/icons/default/default128.png\nType=Application\nCategories=Network;WebBrowser;\nMimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;x-scheme-handler/http;x-scheme-handler/https;\nStartupWMClass=firefox' | sudo tee /usr/share/applications/firefox-developer.desktop
 sudo chmod +x /usr/share/applications/firefox-developer.desktop
 sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser /usr/bin/firefox-developer 60
 # sudo update-alternatives --config x-www-browser
 sudo update-alternatives --set x-www-browser /usr/bin/firefox-developer
 update-alternatives --display x-www-browser
-
+xdg-settings set default-web-browser firefox-developer.desktop
+gh config set browser $(which firefox-developer)
+sudo update-desktop-database
 # desinstalar firefox padrão
 sudo snap remove firefox
 
