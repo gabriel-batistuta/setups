@@ -24,7 +24,7 @@ echo 'alias python_venv="python3 -m virtualenv -p python3"' >> ~/.zshrc
 
 echo 'alias postgres="psql -h localhost -U postgres"' >> ~/.zshrc
 
-echo 'alias firefox="firefox-developer"' >> ~/.zshrc
+echo 'alias firefox="firefox-developer-edition"' >> ~/.zshrc
 
 echo 'alias gem="sudo gem"' >> ~/.zshrc
 
@@ -88,8 +88,8 @@ cargo install bat exa
 echo 'alias cat="bat"' >> ~/.zshrc
 echo 'alias ls="exa"' >> ~/.zshrc
 
-chmod 600 ~/.ssh/id_rsa.pub
-chmod 600 ~/.ssh/id_rsa
-chmod 700 ~/.ssh
+echo 'chmod 600 ~/.ssh/id_rsa.pub' >> ~/.zshrc
+echo chmod 600 '~/.ssh/id_rsa' >> ~/.zshrc
+echo chmod 700 '~/.ssh' >> ~/.zshrc
 echo 'alias vm_oracle="ssh -i ~/.ssh/id_rsa ubuntu@129.148.56.24 -p 22"' >> ~/.zshrc
 echo 'alias jutsu="ssh -D 9999 -C -q -N -i ~/.ssh/id_rsa ubuntu@129.148.56.24 -p 80"' >> ~/.zshrc
