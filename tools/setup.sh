@@ -31,3 +31,6 @@ sudo apt install gobuster
 # https://github.com/josueBarretogit/manga-tui
 sudo apt-get install -y libssl-dev
 cargo install manga-tui --locked
+
+# peerflix (stream videos from torrent)
+sudo npm install -g peerflix﻿
