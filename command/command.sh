@@ -22,9 +22,17 @@ echo 'alias cls="clear"' >> ~/.zshrc
 # call python venv
 echo 'alias python_venv="python3 -m virtualenv -p python3"' >> ~/.zshrc
 
+# postgresql shorcut
 echo 'alias postgres="psql -h localhost -U postgres"' >> ~/.zshrc
 
+# firefox developer edition
 echo 'alias firefox="firefox-developer-edition"' >> ~/.zshrc
+
+# video stream using peerflix
+echo 'stream() {
+	url=$1
+	peerflix $url --vlc
+}\n' >> ~/.zshrc
 
 echo 'alias gem="sudo gem"' >> ~/.zshrc
 
