@@ -92,4 +92,5 @@ echo 'chmod 600 ~/.ssh/id_rsa.pub' >> ~/.zshrc
 echo chmod 600 '~/.ssh/id_rsa' >> ~/.zshrc
 echo chmod 700 '~/.ssh' >> ~/.zshrc
 echo 'alias vm_oracle="ssh -i ~/.ssh/id_rsa ubuntu@129.148.56.24 -p 22"' >> ~/.zshrc
+echo 'alias vm_uern="ssh -p 3011 gabriel@lordi.uern.br"'
 echo 'alias jutsu="ssh -D 9999 -C -q -N -i ~/.ssh/id_rsa ubuntu@129.148.56.24 -p 80"' >> ~/.zshrc
