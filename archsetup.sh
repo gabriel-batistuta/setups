@@ -168,4 +168,4 @@ unzip Easy-Diffusion-Linux.zip
 #cd easy-diffusion
 #./start.sh
 # alias
-echo 'alias difusion="cd easy-diffusion && ./start.sh && cd"' >> ~/.zshrc
+echo 'alias difusion="cd ~/easy-diffusion && ./start.sh"' >> ~/.zshrc
