@@ -132,5 +132,20 @@ sudo pacman -S unixodbc postgresql-libs
 yay -S psqlodbc
 # C
 sudo pacman -S clang
-sudo pacman -S cmake
-# 
+sudo pacman -S cmake 
+
+
+#Instalar o virt-manager qemu
+sudo pacman -S virt-manager qemu-desktop ebtables iptables-nft  dnsmasq edk2-ovmf spice-vdagent virt-viewer
+sudo systemctl enable libvirtd.service && sudo systemctl start libvirtd.service
+	
+###Iniciar Rede manualmente
+#sudo virsh net-start default 
+###Automaticamente
+sudo virsh net-autostart default 
+
+# android-tools	
+sudo pacman -S android-tools
+
+# lutris dependencies
+sudo pacman -S zenity gcc-libs gnutls vulkan-validation-layers vulkan-intel vulkan-radeon vulkan-icd-loader libva fontconfig lcms2 libxml2 libxcursor libxrandr libxdamage libxi gettext freetype2 glu libsm libpcap faudio giflib libpng libldap mpg123 openal v4l-utils libpulse alsa-lib alsa-plugins libjpeg-turbo libxcomposite libxinerama ocl-icd libxslt gst-plugins-base-libs vkd3d sdl2 sdl2_ttf sdl2_image sdl2_net libcups libidn11 pixman zlib mesa ncurses krb5 libxcb cairo libx11 libx86emu libxss libgphoto2 sane noto-fonts-emoji lib32-glibc lib32-gcc-libs lib32-gnutls lib32-vulkan-validation-layers lib32-vulkan-intel lib32-vulkan-radeon lib32-vulkan-icd-loader lib32-libva lib32-fontconfig lib32-lcms2 lib32-libxml2 lib32-libxcursor lib32-libxrandr lib32-libxdamage lib32-libxi lib32-gettext lib32-freetype2 lib32-glu lib32-libsm lib32-faudio lib32-libpcap lib32-giflib lib32-libpng lib32-libldap lib32-mpg123 lib32-openal lib32-v4l-utils lib32-libpulse lib32-alsa-lib lib32-alsa-plugins lib32-libjpeg-turbo lib32-libxcomposite lib32-libxinerama lib32-ocl-icd lib32-libxslt lib32-gst-plugins-base-libs lib32-vkd3d lib32-sdl2 lib32-sdl2_ttf lib32-sdl2_image lib32-libcups lib32-libidn11 lib32-pixman lib32-zlib lib32-mesa lib32-cairo lib32-libx11 lib32-libxcb lib32-krb5 lib32-ncurses lib32-libxss
