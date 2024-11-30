@@ -155,3 +155,6 @@ sudo pacman -S zenity gcc-libs gnutls vulkan-validation-layers vulkan-intel vulk
 
 # spice-vdagent
 sudo pacman -S spice-vdagent
+
+# install plank dock
+sudo pacman -S plank
