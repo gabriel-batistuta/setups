@@ -77,6 +77,8 @@ sudo pacman -S flatpak
 # Graphical Apps
 # Add flathub
 flatpak remote-add --if-not-exists flathub "https://flathub.org/repo/flathub.flatpakrepo"
+# ALPACA AI
+flatpak install flathub com.jeffser.Alpaca
 # OBS STUDIO
 flatpak install flathub com.obsproject.Studio
 # DISCORD
