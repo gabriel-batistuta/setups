@@ -144,6 +144,9 @@ sudo systemctl enable libvirtd.service && sudo systemctl start libvirtd.service
 ###Automaticamente
 sudo virsh net-autostart default 
 
+# configuração pra deixar a VM com 1080p
+# https://superuser.com/questions/132322/how-to-increase-the-visualized-screen-resolution-on-qemu-kvm#answer-1822071
+
 # android-tools	
 sudo pacman -S android-tools
 
