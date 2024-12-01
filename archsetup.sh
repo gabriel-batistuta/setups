@@ -24,37 +24,6 @@ cd yay
 makepkg -si
 yay -S visual-studio-code-bin
 
-# Alacrity
-sudo pacman -S cmake freetype2 fontconfig pkg-config make libxcb libxkbcommon python
-sudo pacman -S alacritty
-
-# Tmux
-sudo pacman -S tmux
-touch ~/.tmux.conf
-echo '
-set -g prefix ^A
-set -g base-index 1
-#set -g renumber-windows on
-setw -g mode-keys vi
-set -g detach-on-destroy off
-set-option -g mouse on
-set-option -g status-position top
-
-bind-key '"' split-window -c "#{pane_current_path}"
-bind-key % split-window -h -c "#{pane_current_path}"
-bind-key a set-window-option synchronize-panes\; display-message "synchronize-panels is now #{?pane_synchronized,on,off}"
-
-bind-key h select-pane -L
-bind-key j select-pane -D
-bind-key k select-pane -U
-bind-key l select-pane -R
-
-bind-key C-h resize-pane -L 5
-bind-key C-j resize-pane -D 5
-bind-key C-k resize-pane -U 5
-bind-key C-l resize-pane -R 5
-' > ~/.tmux.conf
-
 # GIT
 sudo pacman -S git -y
 sudo pacman -S github-cli
@@ -82,6 +51,102 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 echo '\nexport BROWSER=firefox-developer-edition' >> ~/.zshrc
 xdg-mime default firefox-developer-edition.desktop x-scheme-handler/http\nxdg-mime default firefox-developer-edition.desktop x-scheme-handler/https\n
 
+# Tmux
+sudo pacman -S tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+touch ~/.tmux.conf
+echo '
+set -g prefix ^A
+set -g base-index 1
+#set -g renumber-windows on
+setw -g mode-keys vi
+set -g detach-on-destroy off
+set-option -g mouse on
+set-option -g status-position top
+
+bind-key '"' split-window -c "#{pane_current_path}"
+bind-key % split-window -h -c "#{pane_current_path}"
+bind-key a set-window-option synchronize-panes\; display-message "synchronize-panels is now #{?pane_sync>
+
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+bind-key C-h resize-pane -L 5
+bind-key C-j resize-pane -D 5
+bind-key C-k resize-pane -U 5
+bind-key C-l resize-pane -R 5
+
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'catppuccin/tmux'
+
+set -g @catppuccin_flavor 'mocha'
+
+run "~/.tmux/plugins/tpm/tpm"
+' > ~/.tmux.conf
+
+# NerdFonts
+mkdir ~/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/SourceCodePro.zip -O ~/.fonts/SourceCodePro.zip
+unzip ~/.fonts/SourceCodePro.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/NerdFontsSymbolsOnly.zip -O ~/.fonts/NerdFontsSymbolsOnly.zip
+unzip ~/.fonts/NerdFontsSymbolsOnly.zip
+rm SourceCodePro.zip && rm NerdFontsSymbolsOnly.zip
+
+# Alacrity
+sudo pacman -S cmake freetype2 fontconfig pkg-config make libxcb libxkbcommon python
+sudo pacman -S alacritty
+if [ -d "~/.config" ]; then
+  mkdir -p ~/.config/alacritty/
+  touch ~/.config/alacritty/alacritty.toml
+else
+  mkdir -p ~/.config
+  mkdir -p ~/.config/alacritty/
+  touch ~/.config/alacritty/alacritty.toml
+fi
+
+# Alacritty .toml
+echo '
+live_config_reload = true
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "buttonless"
+dynamic_padding = false
+opacity = 0.9
+
+[window.dimensions]
+#colums = 200
+#lines = 40
+
+[window.padding]
+#x = 10
+#y = 10
+
+[font]
+size=15
+
+[font.bold]
+#family = "SauseCodePro Nerd Font"
+#style = "Bold"
+
+[font.italic]
+#family = "SauseCodePro Nerd Font"
+#style = "Italic"
+
+[font.normal]
+#family = "SauseCodePro Nerd Font"
+#style = "Regular"
+
+[font.bold_italic]
+#family = "SauseCodePro Nerd Font"
+#style = "Bold Italic"
+
+' > ~/.config/alacritty/alacritty.toml
 
 # PDF2HTMLEX
 mkdir -p ~/Applications
