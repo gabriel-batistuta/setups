@@ -24,6 +24,13 @@ cd yay
 makepkg -si
 yay -S visual-studio-code-bin
 
+# Alacrity
+sudo pacman -S cmake freetype2 fontconfig pkg-config make libxcb libxkbcommon python
+sudo pacman -S alacritty
+
+# Tmux
+sudo pacman -S tmux
+
 # GIT
 sudo pacman -S git -y
 sudo pacman -S github-cli
