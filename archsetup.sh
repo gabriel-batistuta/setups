@@ -30,6 +30,30 @@ sudo pacman -S alacritty
 
 # Tmux
 sudo pacman -S tmux
+touch ~/.tmux.conf
+echo '
+set -g prefix ^A
+set -g base-index 1
+#set -g renumber-windows on
+setw -g mode-keys vi
+set -g detach-on-destroy off
+set-option -g mouse on
+set-option -g status-position top
+
+bind-key '"' split-window -c "#{pane_current_path}"
+bind-key % split-window -h -c "#{pane_current_path}"
+bind-key a set-window-option synchronize-panes\; display-message "synchronize-panels is now #{?pane_synchronized,on,off}"
+
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+bind-key C-h resize-pane -L 5
+bind-key C-j resize-pane -D 5
+bind-key C-k resize-pane -U 5
+bind-key C-l resize-pane -R 5
+' > ~/.tmux.conf
 
 # GIT
 sudo pacman -S git -y
