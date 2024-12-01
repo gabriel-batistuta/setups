@@ -4,6 +4,11 @@
 # Atualiza somente os pacotes remotos, similar: (APT UPDATE)
 sudo pacman -Sy
 
+# Firefox Developer Edition
+sudo pacman -S firefox-developer-edition
+xdg-settings set default-web-browser firefox-developer-edition.desktop
+
+
 # Audio Drivers (Pipeware)
 sudo pacman -S sof-firmware
 sudo pacman -S pipewire pipewire-alsa pipewire-pulse pipewire-jack
@@ -43,6 +48,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # zsh-syntax-highlighting
 # powerlevel10k/powerlevel10k
 # git)
+echo '\nexport BROWSER=firefox-developer-edition' >> ~/.zshrc
+xdg-mime default firefox-developer-edition.desktop x-scheme-handler/http\nxdg-mime default firefox-developer-edition.desktop x-scheme-handler/https\n
 
 
 # PDF2HTMLEX
