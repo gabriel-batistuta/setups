@@ -8,6 +8,9 @@ sudo pacman -Sy
 sudo pacman -S firefox-developer-edition
 xdg-settings set default-web-browser firefox-developer-edition.desktop
 
+# Gnome Terminal
+# definir como app padrão de terminal no linux
+sudo pacman -S gnome-terminal
 
 # Audio Drivers (Pipeware)
 sudo pacman -S sof-firmware
