@@ -8,6 +8,10 @@ sudo pacman -Sy
 sudo pacman -S firefox-developer-edition
 xdg-settings set default-web-browser firefox-developer-edition.desktop
 
+# nvidia drivers
+sudo pacman -S base-devel linux-headers git nano --needed
+sudo pacman -S nvidia
+
 # Gnome Terminal
 # definir como app padrão de terminal no linux
 sudo pacman -S gnome-terminal
