@@ -193,6 +193,8 @@ flatpak install flathub com.jeffser.Alpaca
 flatpak install flathub com.obsproject.Studio
 # DISCORD
 flatpak install flathub com.discordapp.Discord
+# visualisador de imagens do gnome
+flatpak install flathub org.gnome.Loupe
 # LUTRIS
 flatpak install flathub net.lutris.Lutris
 # QBITORRENT
