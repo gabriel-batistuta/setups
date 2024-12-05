@@ -16,6 +16,18 @@ sudo pacman -S nvidia
 # definir como app padrão de terminal no linux
 # sudo pacman -S gnome-terminal
 
+# Trocar o uso do wayland por x11
+sudo nano /etc/gdm/custom.conf
+# na tela desmarque o WaylandEnable=false
+# [daemon]
+# WaylandEnable=false
+# reinicie sistema de janelas
+# sudo systemctl restart gdm
+# mostre o atual
+# echo $XDG_SESSION_TYPE
+
+
+
 # GNOME Dock in Arch Linux
 yay -S gnome-shell-extension-dash-to-dock
 yay -S chrome-gnome-shell
