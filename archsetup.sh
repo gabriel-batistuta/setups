@@ -16,6 +16,13 @@ sudo pacman -S nvidia
 # definir como app padrão de terminal no linux
 # sudo pacman -S gnome-terminal
 
+# GNOME Dock in Arch Linux
+yay -S gnome-shell-extension-dash-to-dock
+yay -S chrome-gnome-shell
+# go to https://extensions.gnome.org/extension/307/dash-to-dock/
+# and turn on option
+# after that go to Gnome Extensions and set on and configure Dash to Dock
+
 # kitty terminal
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 # Create symbolic links to add kitty and kitten to PATH (assuming ~/.local/bin is in
