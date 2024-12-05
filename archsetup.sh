@@ -49,6 +49,7 @@ sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.loca
 echo 'kitty.desktop' > ~/.config/xdg-terminals.list
 # link simbolico pra chamar o kitty
 sudo ln -s ~/.local/kitty.app/bin/kitty /usr/local/bin/
+# abra os atalhos das configurações e adicione o atalho (Nome=Shell, command=kitty, Teclas=Ctrl+Alt+T)
 
 # Audio Drivers (Pipeware)
 sudo pacman -S sof-firmware
