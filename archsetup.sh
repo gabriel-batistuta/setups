@@ -26,8 +26,6 @@ sudo nano /etc/gdm/custom.conf
 # mostre o atual
 # echo $XDG_SESSION_TYPE
 
-
-
 # GNOME Dock in Arch Linux
 yay -S gnome-shell-extension-dash-to-dock
 yay -S chrome-gnome-shell
@@ -73,7 +71,6 @@ git config --global user.name gabriel
 git config --global init.defaultBranch main
 gh auth login
 # gh config set browser $(which firefox-developer)
-
 
 # ZSH
 chsh -s $(which zsh)
@@ -200,6 +197,10 @@ sudo pacman -S fuse2
 echo 'export PATH=$PATH:~/Applications' >> ~/.zshrc
 source ~/.zshrc
 
+# Flameshot
+sudo pacman -S flameshot
+# abra as configurações e desabilite os atalhos de print (padrão GNOME Screenshot)
+# Adicione o atalho personalizado (nome=Flameshot, command=flameshot gui, tecla=PrtSc)
 
 # extra packages
 sudo pacman -S neofetch
@@ -281,7 +282,6 @@ yay -S psqlodbc
 # C
 sudo pacman -S clang
 sudo pacman -S cmake 
-
 
 #Instalar o virt-manager qemu
 sudo pacman -S virt-manager qemu-desktop ebtables iptables-nft  dnsmasq edk2-ovmf spice-vdagent virt-viewer
