@@ -16,6 +16,12 @@ sudo pacman -S nvidia
 # definir como app padrão de terminal no linux
 # sudo pacman -S gnome-terminal
 
+# adicionar botões maximizar e minimizar nos app
+# vá para o app de ajustes
+# seção Janelas:
+# Em botões da barra de titulo:
+# marque Maximizar e Minimizar
+
 # Trocar o uso do wayland por x11
 sudo nano /etc/gdm/custom.conf
 # na tela desmarque o WaylandEnable=false
