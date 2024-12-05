@@ -47,6 +47,8 @@ sed -i "s|Icon=kitty|Icon=$(readlink -f ~)/.local/kitty.app/share/icons/hicolor/
 sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
 # Make xdg-terminal-exec (and hence desktop environments that support it use kitty)
 echo 'kitty.desktop' > ~/.config/xdg-terminals.list
+# link simbolico pra chamar o kitty
+sudo ln -s ~/.local/kitty.app/bin/kitty /usr/local/bin/
 
 # Audio Drivers (Pipeware)
 sudo pacman -S sof-firmware
