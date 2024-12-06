@@ -102,98 +102,6 @@ xdg-mime default firefox-developer-edition.desktop x-scheme-handler/http\nxdg-mi
 sudo pacman -S tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 touch ~/.tmux.conf
-echo '
-set -g prefix ^A
-set -g base-index 1
-#set -g renumber-windows on
-setw -g mode-keys vi
-set -g detach-on-destroy off
-set-option -g mouse on
-set-option -g status-position top
-
-bind-key '"' split-window -c "#{pane_current_path}"
-bind-key % split-window -h -c "#{pane_current_path}"
-bind-key a set-window-option synchronize-panes\; display-message "synchronize-panels is now #{?pane_sync>
-
-bind-key h select-pane -L
-bind-key j select-pane -D
-bind-key k select-pane -U
-bind-key l select-pane -R
-
-bind-key C-h resize-pane -L 5
-bind-key C-j resize-pane -D 5
-bind-key C-k resize-pane -U 5
-bind-key C-l resize-pane -R 5
-
-set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'tmux-plugins/tmux-resurrect'
-set -g @plugin 'tmux-plugins/tmux-continuum'
-set -g @plugin 'catppuccin/tmux'
-
-set -g @catppuccin_flavor 'mocha'
-
-run "~/.tmux/plugins/tpm/tpm"
-' > ~/.tmux.conf
-
-# NerdFonts
-mkdir ~/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/SourceCodePro.zip -O ~/.fonts/SourceCodePro.zip
-unzip ~/.fonts/SourceCodePro.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/NerdFontsSymbolsOnly.zip -O ~/.fonts/NerdFontsSymbolsOnly.zip
-unzip ~/.fonts/NerdFontsSymbolsOnly.zip
-rm SourceCodePro.zip && rm NerdFontsSymbolsOnly.zip
-
-# Alacrity
-sudo pacman -S cmake freetype2 fontconfig pkg-config make libxcb libxkbcommon python
-sudo pacman -S alacritty
-if [ -d "~/.config" ]; then
-  mkdir -p ~/.config/alacritty/
-  touch ~/.config/alacritty/alacritty.toml
-else
-  mkdir -p ~/.config
-  mkdir -p ~/.config/alacritty/
-  touch ~/.config/alacritty/alacritty.toml
-fi
-
-# Alacritty .toml
-echo '
-live_config_reload = true
-[env]
-TERM = "xterm-256color"
-
-[window]
-decorations = "buttonless"
-dynamic_padding = false
-opacity = 0.9
-
-[window.dimensions]
-#colums = 200
-#lines = 40
-
-[window.padding]
-#x = 10
-#y = 10
-
-[font]
-size=15
-
-[font.bold]
-#family = "SauseCodePro Nerd Font"
-#style = "Bold"
-
-[font.italic]
-#family = "SauseCodePro Nerd Font"
-#style = "Italic"
-
-[font.normal]
-#family = "SauseCodePro Nerd Font"
-#style = "Regular"
-
-[font.bold_italic]
-#family = "SauseCodePro Nerd Font"
-#style = "Bold Italic"
-
-' > ~/.config/alacritty/alacritty.toml
 
 # PDF2HTMLEX
 mkdir -p ~/Applications
@@ -268,6 +176,14 @@ sudo pacman -S ruby
 # Rust
 # sudo pacman -S rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# NGROK
+# ferramenta pra mostrar seu app publicamente só pelo localhost
+# https://dashboard.ngrok.com/get-started/setup/linux
+cd /tmp && wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+sudo tar -xvzf ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
+# ngrok config add-authtoken YOUR_TOKEN 
+# run pra mostrar publicamente seu app no localhost 8080:
+# ngrok http http://localhost:8080
 # Flutter
 yay -Sy flutter
 yay -Sy android-sdk android-sdk-build-tools android-sdk-cmdline-tools-latest android-platform android-sdk-platform-tools
