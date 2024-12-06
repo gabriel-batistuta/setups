@@ -56,6 +56,15 @@ echo 'kitty.desktop' > ~/.config/xdg-terminals.list
 # link simbolico pra chamar o kitty
 sudo ln -s ~/.local/kitty.app/bin/kitty /usr/local/bin/
 # abra os atalhos das configurações e adicione o atalho (Nome=Shell, command=kitty, Teclas=Ctrl+Alt+T)
+# ADD OPEN WITH KITTY ON NAUTILUS
+# https://github.com/Stunkymonkey/nautilus-open-any-terminal
+yay -S nautilus-open-any-terminal
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal kitty
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
+#nautilus -q
 
 # Audio Drivers (Pipeware)
 sudo pacman -S sof-firmware
