@@ -1,6 +1,9 @@
 # shortcut for development folder
 echo 'alias p="cd ~/Documentos/programming"\n' >> ~/.zshrc
 
+# for Kitty terminal clear ->
+# echo 'printf "\033[2J\033[3J\033[1;1H"\n' >> ~/.zshrc
+
 echo 'alias s="source venv/bin/activate"\n' >> ~/.zshrc
 
 echo 'alias r="pip install -r requirements.txt"\n' >> ~/.zshrc
