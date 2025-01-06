@@ -31,6 +31,24 @@ nvm install 20
 node -v
 npm -v
 
+# <<<------------------- IMPORTANT: OPEN STORE AND INSTALL ANDROID STUDIO FOR CONTINUE ------------------->>>
+
+# install expo for react native
+npm install -g expo-cli
+# install configs for use android studio emulator
+sudo apt install openjdk-17-jdk
+# set paths for android studio
+echo 'export ANDROID_HOME=/home/gabriel/Android/Sdk
+export ANDROID_SDK_ROOT=/home/gabriel/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH' >> ~/.zshrc
+source ~/.zshrc
+
 # php
 cd ~/Documents/temporary
 sudo apt-get install lamp-server^ -y
