@@ -56,7 +56,10 @@ chmod +x xampp-linux-x64-8.2.0-0-installer.run
 sudo ./xampp-linux-x64-8.2.0-0-installer.run
 
 # ruby
-sudo apt-get install ruby-full
+sudo apt update  
+sudo apt install -y build-essential libssl-dev libreadline-dev zlib1g-dev libyaml-dev libffi-dev libgdbm-dev ruby-dev
+sudo apt install ruby
+# sudo apt-get install ruby-full
 # rails
 gem install rails
 
