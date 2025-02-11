@@ -56,13 +56,23 @@ chmod +x xampp-linux-x64-8.2.0-0-installer.run
 sudo ./xampp-linux-x64-8.2.0-0-installer.run
 
 # ruby
-sudo apt update  
-sudo apt install -y build-essential libssl-dev libreadline-dev zlib1g-dev libyaml-dev libffi-dev libgdbm-dev ruby-dev
-sudo apt install ruby
-# sudo apt-get install ruby-full
-# bundler
+sudo apt update
+sudo apt install -y git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline-dev zlib1g-dev libncurses-dev libffi-dev libgdbm-dev
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+cd ~/.rbenv && src/configure && make -C src
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+source ~/.zshrc
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+# rbenv
+rbenv install 3.4.1
+rbenv global 3.4.1
+# remove alias gem
+ruby -v
+unalias gem
+which gem
+# install bundler and rails
 gem install bundler
-# rails
 gem install rails
 
 # sqlite
