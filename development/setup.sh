@@ -105,8 +105,14 @@ EOF
 # enter in postgres
 # psql -h localhost -U postgres
 
-# ODBC
+# ODBC (for use library in python to handle postgres)
 sudo apt install odbc-postgresql
+
+# install PG_ADMIN4 (Graphical APP for Postgres )
+curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+# Install for both desktop and web modes:
+sudo apt install pgadmin4
 
 # flutter
 wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.22.3-stable.tar.xz
