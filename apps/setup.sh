@@ -4,7 +4,13 @@ sudo snap install authy
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub "https://flathub.org/repo/flathub.flatpakrepo"
 
+# OBS
 flatpak install flathub com.obsproject.Studio
+# Para erros de drivers da nvidia no OBS
+# sudo apt update && sudo apt upgrade -y
+# sudo ubuntu-drivers autoinstall  # (caso esteja usando Ubuntu)
+# reboot
+
 
 flatpak install flathub com.discordapp.Discord
 
