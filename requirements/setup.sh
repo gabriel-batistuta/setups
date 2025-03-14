@@ -15,6 +15,10 @@ sudo update-desktop-database
 # desinstalar firefox padrão
 sudo snap remove firefox
 
+# Teclado RGB KNUP no Linux 
+sudo apt install brightnessctl
+brightnessctl -l
+sudo brightnessctl --device='input8::scrolllock' set 1
 
 # git
 sudo apt-get install git
