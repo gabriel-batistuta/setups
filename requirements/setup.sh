@@ -16,9 +16,27 @@ sudo update-desktop-database
 sudo snap remove firefox
 
 # Teclado RGB KNUP no Linux 
-sudo apt install brightnessctl
-brightnessctl -l
-sudo brightnessctl --device='input8::scrolllock' set 1
+mkdir -p ~/.config/autostart
+nano ~/.config/autostart/keyboard-led.desktop
+# ADICIONE ISSO:
+[Desktop Entry]
+Type=Application
+Exec=xset led 3
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Keyboard LED
+Comment=Ativar LED do teclado ao iniciar
+# OU
+crontab -e
+@reboot DISPLAY=:0 xset led 3
+# OU
+setxkbmap -option "grp_led:scroll"
+
+
+#sudo apt install brightnessctl
+#brightnessctl -l
+#sudo brightnessctl --device='input8::scrolllock' set 1
 
 # git
 sudo apt-get install git
