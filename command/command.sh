@@ -105,3 +105,10 @@ echo chmod 700 '~/.ssh' >> ~/.zshrc
 echo 'alias vm_oracle="ssh -i ~/.ssh/id_rsa ubuntu@129.148.56.24 -p 22"' >> ~/.zshrc
 echo 'alias vm_uern="ssh -p 3011 gabriel@lordi.uern.br"'
 echo 'alias jutsu="ssh -D 9999 -C -q -N -i ~/.ssh/id_rsa ubuntu@129.148.56.24 -p 80"' >> ~/.zshrc
+
+# config do foxy proxy - Tipo=SOCKS5, Hostname=localhost, Porta=9999
+echo 'alias jutsu_uern="ssh -D 9999 -C -q -N \
+  -o PubkeyAuthentication=no \
+  -o PreferredAuthentications=password \
+  -p 3011 gabriel@lordi.uern.br
+"' >> ~/.zshrc
