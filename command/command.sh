@@ -29,7 +29,7 @@ echo 'alias python_venv="python3 -m virtualenv -p python3"' >> ~/.zshrc
 echo 'alias postgres="psql -h localhost -U postgres"' >> ~/.zshrc
 
 # firefox developer edition
-echo 'alias firefox="firefox-developer-edition"' >> ~/.zshrc
+echo 'alias firefox="firefox-developer"' >> ~/.zshrc
 
 # video stream using peerflix
 echo 'stream() {
