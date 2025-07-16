@@ -57,6 +57,7 @@ HASH="$(curl -sS https://composer.github.io/installer.sig)"
 php -r "if (hash_file('sha384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 composer --version  # deve exibir algo como Composer x.y.z
+sudo apt install php8.3-intl
 
 # ruby
 sudo apt update
