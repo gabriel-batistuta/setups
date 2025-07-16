@@ -49,11 +49,14 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 
-# php
-cd ~/Documents/temporary
-sudo apt-get install lamp-server^ -y
-chmod +x xampp-linux-x64-8.2.0-0-installer.run
-sudo ./xampp-linux-x64-8.2.0-0-installer.run
+# php | laravel
+cdsudo apt install -y php php-cli php-fpm php-mbstring php-xml php-bcmath php-json php-zip unzip curl git
+cd /tmp
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+HASH="$(curl -sS https://composer.github.io/installer.sig)"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+composer --version  # deve exibir algo como Composer x.y.z
 
 # ruby
 sudo apt update
