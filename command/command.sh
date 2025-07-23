@@ -10,6 +10,8 @@ echo 'alias r="pip install -r requirements.txt"\n' >> ~/.zshrc
 
 echo 'alias v="python3 -m venv venv"\n' >> ~/.zshrc
 
+echo 'alias e="deactivate"\n' >> ~/.zshrc
+
 # shorcut for view hardware info
 echo 'alias hardware="sudo lshw"\n' >> ~/.zshrc
 
