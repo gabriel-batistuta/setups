@@ -56,6 +56,17 @@ setxkbmap -option "grp_led:scroll"
 #brightnessctl -l
 #sudo brightnessctl --device='input8::scrolllock' set 1
 
+# Flameshot
+sudo apt install flameshot
+# Vá em configurações/Teclado > Atalhos de teclado
+# Desative os atalhos padrão que usam a tecla Print
+# Clique no atalho, e pressione Backspace para remover.
+# Vá para o final da lista de atalhos e clique em "+" para adicionar um novo.
+# Nome: Flameshot
+# Comando: flameshot gui
+# Tecla: PrtSc
+# Definir atalho e pressione a tecla Print
+
 # git
 sudo apt-get install git
 git config --global user.email batistutag190@gmail.com
