@@ -58,7 +58,10 @@ sudo apt-get install -y \
   libtidy-dev libxslt1-dev
 # phpenv sintax is equal to rbenv, phpenv install, local, global
 phpenv install 8.2.6
-
+# composer
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+composer --version
 
 # ruby
 sudo apt update
