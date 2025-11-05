@@ -83,6 +83,11 @@ which gem
 gem install bundler
 gem install rails
 
+# docker
+sudo apt update
+sudo apt install ca-certificates curl gnupg
+# (sudo docker)
+
 # sqlite
 sudo apt install sqlite3
 sqlite3 --version
