@@ -86,3 +86,16 @@ sudo apt install flatpak
 sudo apt install snapd
 
 sudo apt install tmux
+
+# gnome-tweaks & extensions
+sudo apt install gnome-shell-extensions gnome-tweaks
+sudo apt install gnome-shell-extension-manager
+
+# minimizar app no icone da barra
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+
+# extensões pra baixar no gerenciador de extensões
+# Blur my Shell | desativar Desfoque do Dash to Dock
+# Burn My Windows | add Efeito de TV
+# Compiz windows effect | Fric 3,8 - Spring 3.0 - speed 2.0 - Mass 35 - Max effect
+# Quick Settings Tweaks | Mexe nada
