@@ -94,6 +94,7 @@ source ~/venvs/airflow/bin/activate # rodar toda vez que for usar o airflow
 pip install "apache-airflow"
 echo 'export AIRFLOW_HOME="$HOME/airflow"' >> ~/.zshrc
 echo 'alias airflow="$HOME/venvs/airflow/bin/airflow"' >> ~/.zshrc
+echo 'alias load_airflow="source ~/venvs/airflow/bin/activate"' >> ~/.zshrc
 source ~/.zshrc
 
 # sqlite
