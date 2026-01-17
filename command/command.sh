@@ -114,3 +114,21 @@ echo 'alias jutsu_uern="ssh -D 9999 -C -q -N \
   -o PreferredAuthentications=password \
   -p 3011 gabriel@lordi.uern.br
 "' >> ~/.zshrc
+
+standalone() {
+  # abre a aba da senha em background
+  (
+    while [ ! -f "$HOME/airflow/simple_auth_manager_passwords.json.generated" ]; do
+      sleep 1
+    done
+
+    gnome-terminal --tab -- bash -c \
+      'echo "Credenciais de login do Apache Airflow:"; \
+       echo "------------------------------------"; \
+       cat /home/gabriel/airflow/simple_auth_manager_passwords.json.generated; \
+       exec zsh'
+  ) &
+
+  # airflow fica em foreground
+  airflow standalone
+}
