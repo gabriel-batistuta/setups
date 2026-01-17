@@ -89,23 +89,12 @@ sudo apt install ca-certificates curl gnupg
 # (sudo docker)
 
 # Apache Airflow
-# add no ~/.zshrc:
-# export AIRFLOW_HOME=~/airflow
-# Defina a versão do Airflow
-export AIRFLOW_VERSION=3.1.6
-# Crie e ative um ambiente virtual
-python -m venv .venv
-source .venv/bin/activate
-# Atualize o pip
-python -m pip install --upgrade pip setuptools wheel
-# Descobre a versão do Python (ex: 3.10, 3.11)
-PYTHON_VERSION="$(python -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')"
-# URL de constraints correta para sua versão de Python
-CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
-# Instala o Airflow usando constraints (obrigatório)
-python -m pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
-# start airflow -> localhost:8080
-airflow standalone
+python3 -m venv ~/venvs/airflow
+source ~/venvs/airflow/bin/activate # rodar toda vez que for usar o airflow
+pip install "apache-airflow"
+echo 'export AIRFLOW_HOME="$HOME/airflow"' >> ~/.zshrc
+echo 'alias airflow="$HOME/venvs/airflow/bin/airflow"' >> ~/.zshrc
+source ~/.zshrc
 
 # sqlite
 sudo apt install sqlite3
